@@ -42,3 +42,11 @@ BUILD_FINGERPRINT := Xiaomi/land/land:6.0.1/MMB29M/V10.2.1.0.MALMIXM:user/releas
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model
+
+ifeq ($(CURRENT_BUILD_TYPE), gapps)
+#Gapps
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+endif
