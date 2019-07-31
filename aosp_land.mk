@@ -21,7 +21,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/aex/config/common.mk)
+$(call inherit-product, vendor/aosp/common.mk)
+
+TARGET_BOOT_ANIMATION_RES := 720
+EXTENDED_BUILD_TYPE := OFFICIAL
 
 # Inherit from land device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
